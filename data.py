@@ -106,9 +106,7 @@ def load_data_multi_mask(dir_img_name, dir_mask_name, normalise_data_parameters,
 
     img_name_list = set(read_name_list(dir_img_name))
     cross = img_name_list
-    for name_label in mask_name_label_list[0:num_class]:
-        set_mask = set(read_name_list(os.path.join(dir_mask_name, name_label), delete_mask_name))
-        cross = cross & set_mask
+
     print("crossing img and mask: ", len(cross))
 
     X = []
